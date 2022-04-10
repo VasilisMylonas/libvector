@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(libvector VERSION 0.1.0)
 
 add_library(vector vector.c)
+target_include_directories(vector PUBLIC .)
 
 add_executable(vector_test vector_test.c)
 target_link_libraries(vector_test vector)
